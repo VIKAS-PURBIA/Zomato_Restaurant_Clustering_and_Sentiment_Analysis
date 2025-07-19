@@ -1,5 +1,5 @@
 # Zomato_Restaurant_Clustering_and_Sentiment_Analysis
-able of Contents
+Table of Contents
 Introduction
 Project Overview
 Preprocessing Data
