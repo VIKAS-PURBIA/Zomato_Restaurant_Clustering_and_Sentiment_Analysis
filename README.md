@@ -1,40 +1,78 @@
 # Zomato_Restaurant_Clustering_and_Sentiment_Analysis
-Table of Contents
-Introduction
-Project Overview 
-Preprocessing Data
-Feature Engineering
-ML Model Implementation
-Conclusion
-Introduction
-Welcome to the Machine Learning Capstone Project, a comprehensive exploration of data preprocessing, feature engineering, model implementation, and evaluation. This project aims to demonstrate the complete lifecycle of a machine learning project, from data preparation to model deployment.
+---
 
-Project Overview
-Data Collection: I started by collecting data related to customer reviews, restaurants, and other relevant information.
+## 📚 Table of Contents
+- [📌 Introduction](#introduction)
+- [📊 Project Overview](#project-overview)
+- [🧹 Preprocessing Data](#preprocessing-data)
+- [🛠️ Feature Engineering](#feature-engineering)
+- [🤖 ML Model Implementation](#ml-model-implementation)
+- [✅ Conclusion](#conclusion)
 
-Data Preprocessing: Extensive data preprocessing was carried out to handle missing values, clean the data, and prepare it for analysis.
+---
 
-Feature Engineering: I created new features, removed redundant ones, and applied various text preprocessing techniques to enhance the quality of the data.
+## 📌 Introduction
 
-ML Model Implementation: I implemented two machine learning models: K-means clustering and Latent Dirichlet Allocation (LDA) to gain insights from the data.
+This project is a part of my Machine Learning Capstone and demonstrates real-world application of data science techniques on Zomato datasets. It includes advanced text preprocessing, feature extraction, clustering analysis using K-Means, and topic modeling using LDA (Latent Dirichlet Allocation).
 
-Model Evaluation: The models were evaluated based on various metrics, including Silhouette Score, ROC AUC, and more.
+---
 
-Preprocessing Data
-Data collection included reviews, restaurant information, and more.
-Extensive data cleaning and handling of missing values.
-Text preprocessing, including expansion of contractions, lowercasing, and removal of punctuation, URLs, digits, stopwords, and whitespace.
-Feature Engineering
-New features were created to minimize feature correlation.
-Sentiment analysis was performed on reviews, classifying them as positive or negative based on average ratings.
-The 'Cost' feature was log-transformed to address positive skewness.
-ML Model Implementation
-Two machine learning models were implemented:
+## 📊 Project Overview
 
-K-means Clustering: Data was clustered into 6 groups to gain insights into restaurant features.
-Latent Dirichlet Allocation (LDA): Used for topic modeling and analysis of customer reviews.
-Conclusion
-Significant improvements were observed in the clustering results, especially in the selection of an appropriate value for K.
-The LDA model was fine-tuned to improve the Silhouette Score.
-Extensive model evaluation, including ROC AUC, precision, recall, and more, was performed.
-The project provides a comprehensive guide on how to go from data preprocessing to model implementation and evaluation.
+- **Data Collection:** Collected datasets containing restaurant details and customer reviews.
+- **Data Preprocessing:** Performed cleaning, formatting, and normalization to prepare the data for ML models.
+- **Feature Engineering:** Created new features, transformed existing ones, and performed sentiment tagging.
+- **ML Models:** Implemented K-Means clustering and LDA to group and analyze restaurants and review content.
+- **Model Evaluation:** Assessed performance using metrics such as Silhouette Score, ROC AUC, Precision, Recall, etc.
+
+---
+
+## 🧹 Preprocessing Data
+
+- Merged restaurant and review data for analysis.
+- Cleaned missing values, nulls, and inconsistencies.
+- Performed advanced text preprocessing:
+  - Lowercasing
+  - Removal of punctuation, digits, URLs
+  - Stopword removal
+  - Contraction expansion
+- Applied `nltk`, `spaCy`, and `sklearn` utilities for tokenization and vectorization.
+
+---
+
+## 🛠️ Feature Engineering
+
+- Engineered new columns from review text using TF-IDF, sentiment scores, and word counts.
+- Labeled sentiment based on review rating (positive, neutral, negative).
+- Applied log transformation to normalize skewed features like `Cost`.
+- Minimized multicollinearity and selected high-impact features for modeling.
+
+---
+
+## 🤖 ML Model Implementation
+
+### 1. **K-Means Clustering**
+- Grouped restaurants into 6 clusters based on textual and numerical features.
+- Visualized clusters using PCA and evaluated using **Silhouette Score**.
+
+### 2. **Latent Dirichlet Allocation (LDA)**
+- Applied LDA for unsupervised topic modeling on customer reviews.
+- Extracted top terms and topic distributions for insights.
+- Visualized results using `pyLDAvis`.
+
+---
+
+## ✅ Conclusion
+
+- Achieved meaningful segmentation of restaurants using K-Means.
+- LDA revealed key topics in customer sentiment (e.g., food quality, service, ambiance).
+- Optimized `n_components` using Silhouette Score for clustering and coherence for LDA.
+- This end-to-end pipeline offers a powerful framework for deriving insights from textual and structured data in the food tech industry.
+
+---
+
+### 📌 Future Work
+- Apply BERT or transformer-based models for more accurate sentiment classification.
+- Develop a recommendation system using collaborative filtering or NLP embeddings.
+- Deploy models in a Flask app for real-time predictions and dashboard integration.
+"""
